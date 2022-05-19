@@ -24,7 +24,7 @@ Projeyi cloneladıktan sonra Visual Studio Code programını açınız.
 
 ```cmd
 cd desktop
-mkdir Bolum-Sonu-Calismasi
+mkdir Musik-Dukkani
 code .
 ```
 
