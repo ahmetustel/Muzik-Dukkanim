@@ -1,6 +1,10 @@
 # Muzik-Dukkanim
 
-Patika.dev - CSSDersi - ÖDEV 1 - HTML ve CSS yapılarını kullanarak öğrenilen konuların uygulandığı özgün site tasarımı.
+Patika.dev - CSSDersi - ÖDEV 1 - HTML ve CSS yapılarını kullanarak;
+
+- inline, internal ve external CSS yapılarını kullanarak site tasarımı yapıldı.
+- active/current horizontal navigation bar, responsive content, dropdown image, bootstrap link yapıları ile tasarıma görsellik katıldı.
+- gif uzantılı site tasarım öngörünümü aşağıya eklendi.
 
 ---
 
