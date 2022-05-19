@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ürünlerimiz</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial;
+        padding: 10px;
+        background: #f1f1f1;
+      }
+
+      /* Header/Blog Title */
+      .header {
+        padding: 30px;
+        text-align: center;
+        background: #bee4e2;
+        color: #2f8f9d;
+      }
+
+      .header h1 {
+        font-size: 50px;
+      }
+
+      /* Style the top navigation bar */
+      .topnav {
+        overflow: hidden;
+        background-color: #2f8f9d;
+        position: sticky;
+        top: 0;
+      }
+
+      /* Style the topnav links */
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      /* Change color on hover */
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      /*Active topnav link*/
+      .activee {
+        background-color: #3bacb6;
+      }
+
+      /* Create two unequal columns that floats next to each other */
+      /* Left column */
+      .leftcolumn {
+        float: left;
+        width: 100%;
+      }
+
+      /* Add a card effect for articles */
+      .card {
+        background-color: white;
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      /* Responsive image kısmının sınıfları */
+      div.gallery {
+        border: 1px solid #ccc;
+      }
+
+      div.gallery:hover {
+        border: 1px solid #777;
+      }
+
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+
+      div.desc {
+        padding: 15px;
+        text-align: center;
+        height: auto;
+      }
+
+      .responsive {
+        padding: 0 6px;
+        float: left;
+        width: 24.99999%;
+      }
+
+      @media only screen and (max-width: 700px) {
+        .responsive {
+          width: 49.99999%;
+          margin: 6px 0;
+        }
+      }
+
+      @media only screen and (max-width: 500px) {
+        .responsive {
+          width: 100%;
+        }
+      }
+
+      .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background: #bee4e2;
+        color: #2f8f9d;
+        margin-top: 20px;
+      }
+      .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-content h3 {
+        font-weight: 500;
+        text-transform: capitalize;
+        line-height: 3rem;
+      }
+      .footer-content p {
+        max-width: 500px;
+        margin: 10px auto;
+        line-height: 28px;
+      }
+      .socials {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0 3rem 0;
+      }
+      .socials li {
+        margin: 0 10px;
+      }
+      .socials a {
+        text-decoration: none;
+        color: #2f8f9d;
+        border: 1.1px solid #2f8f9d;
+        padding: 5px;
+
+        border-radius: 50%;
+      }
+      .socials a i {
+        font-size: 1.1rem;
+        width: 20px;
+
+        transition: color 0.4s ease;
+      }
+      .socials a:hover i {
+        color: aqua;
+      }
+
+      /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 800px) {
+        .leftcolumn,
+        .rightcolumn {
+          width: 100%;
+          padding: 0;
+        }
+      }
+
+      /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+      @media screen and (max-width: 400px) {
+        .topnav a {
+          float: none;
+          width: 100%;
+        }
+        .socials ul {
+          display: flex;
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>ÜRÜNLERİMİZ</h1>
+    </div>
+
+    <div class="topnav">
+      <a href="homepage.html">Ana Sayfa</a>
+      <a class="activee" href="products.html">Ürünlerimiz</a>
+      <a href="about-us.html">Hakkımızda</a>
+    </div>
+
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <!-- ***************Responsive image gallery'i ekliyorum******************** -->
+          <div class="responsive">
+            <div class="gallery" id="gitar1">
+              <a
+                target="_blank"
+                href="image/Lea Klasik Gitar Seti 3-4 Junior Boy.jpg"
+              >
+                <img
+                  src="image/Lea Klasik Gitar Seti 3-4 Junior Boy.jpg"
+                  alt="Klasik Gitar"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">
+                Lea Klasik Gitar Seti 3/4 Junior Boy - <strong>669,00₺</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery" id="davul1">
+              <a
+                target="_blank"
+                href="image/Extreme Bateri Davul Seti Metalik Kırmızı XDS665RD.jpg"
+              >
+                <img
+                  src="image/Extreme Bateri Davul Seti Metalik Kırmızı XDS665RD.jpg"
+                  alt="Forest"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">
+                Extreme Bateri Davul Seti Metalik Kırmızı XDS665RD -
+                <strong>10.199,86₺</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery" id="keman1">
+              <a target="_blank" href="image/Carlovy VLA8 - 4-4 Keman.jpg">
+                <img
+                  src="image/Carlovy VLA8 - 4-4 Keman.jpg"
+                  alt="Northern Lights"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">
+                Carlovy VLA8 - 4/4 Keman Special - <strong>3.069,36₺</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery" id="piyano1">
+              <a
+                target="_blank"
+                href="image/Yamaha YDP S34B Dijital Piyano (Siyah).jpg"
+              >
+                <img
+                  src="image/Yamaha YDP S34B Dijital Piyano (Siyah).jpg"
+                  alt="Mountains"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">
+                Yamaha YDP S34B Dijital Piyano (Siyah) -
+                <strong>22.499,00₺</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+        <div class="card">
+          <div class="responsive">
+            <div class="gallery" id="gitar2">
+              <a
+                target="_blank"
+                href="image/Midex RPH20BK-AMP Black Elektro Gitar Seti 20 WATT GAİNLİ Amfi ve Full SET.jpg"
+              >
+                <img
+                  src="image/Midex RPH20BK-AMP Black Elektro Gitar Seti 20 WATT GAİNLİ Amfi ve Full SET.jpg"
+                  alt="Klasik Gitar"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">
+                Midex RPH20BK-AMP Black Elektro Gitar Seti 20 WATT GAİN'Lİ Amfi
+                ve Full SET -
+                <strong>2.755,58₺</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery" id="davul2">
+              <a
+                target="_blank"
+                href="image/Fenix Roland TD-17KVX Dijital Davul Seti.jpg"
+              >
+                <img
+                  src="image/Fenix Roland TD-17KVX Dijital Davul Seti.jpg"
+                  alt="Forest"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">
+                Fenix Roland TD-17KVX Dijital Davul Seti -
+                <strong>40.086,00₺</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery" id="keman2">
+              <a target="_blank" href="image/Puka El Yapımı Keman Keman.jpg">
+                <img
+                  src="image/Puka El Yapımı Keman Keman.jpg"
+                  alt="Northern Lights"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">
+                Puka El Yapımı Keman Keman - <strong>7.249,00₺</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery" id="piyano2">
+              <a
+                target="_blank"
+                href="image/Yamaha Cfıııs Concert Grand Konser Kuyruklu Piyano (Parlak Siyah).jpg"
+              >
+                <img
+                  src="image/Yamaha Cfıııs Concert Grand Konser Kuyruklu Piyano (Parlak Siyah).jpg"
+                  alt="Mountains"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">
+                Yamaha Cfıııs Concert Grand Konser Kuyruklu Piyano (Parlak
+                Siyah) -
+                <strong>2.498.523,16₺</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+          <!-- ****************image galelery kısmının bittiği yer********************* -->
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <h2>Footer</h2>
+      <div class="footer-content">
+        <p>
+          Copyright &copy; 2022 All Rights Reserved by
+          <a href="homepage.html">Müzik Dükkanım</a>.
+        </p>
+        <ul class="socials">
+          <li>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-linkedin-square"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

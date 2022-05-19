@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ana Sayfa</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial;
+        padding: 10px;
+        background: #f1f1f1;
+      }
+
+      /* Header/Blog Title */
+      .header {
+        padding: 30px;
+        text-align: center;
+        background: #bee4e2;
+        color: #2f8f9d;
+      }
+
+      .header h1 {
+        font-size: 50px;
+      }
+
+      /* Style the top navigation bar (stiky özellikli) */
+      .topnav {
+        overflow: hidden;
+        background-color: #2f8f9d;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+
+      /* Style the topnav links */
+      .topnav a {
+        float: left;
+
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      /* Change color on hover */
+      .topnav a:hover {
+        background-color: #bee4e2;
+        color: #2f8f9d;
+        font-weight: bold;
+      }
+
+      /*Active topnav link*/
+      .activee {
+        background-color: #3bacb6;
+      }
+
+      /* Create two unequal columns that floats next to each other */
+      /* Left column */
+      .leftcolumn {
+        float: left;
+        width: 75%;
+      }
+
+      /* Right column */
+      .rightcolumn {
+        float: left;
+        width: 25%;
+        background-color: #f1f1f1;
+        padding-left: 20px;
+      }
+
+      /* Add a card effect for articles */
+      .card {
+        background-color: white;
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      /* Responsive image kısmının sınıfları */
+      div.gallery {
+        border: 1px solid #ccc;
+      }
+
+      div.gallery:hover {
+        border: 1px solid #777;
+      }
+
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+
+      div.desc {
+        padding: 15px;
+        text-align: center;
+        height: auto;
+      }
+
+      .responsive {
+        padding: 0 6px;
+        float: left;
+        width: 24.99999%;
+      }
+
+      @media only screen and (max-width: 700px) {
+        .responsive {
+          width: 49.99999%;
+          margin: 6px 0;
+        }
+      }
+
+      @media only screen and (max-width: 500px) {
+        .responsive {
+          width: 100%;
+        }
+      }
+
+      .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* hakkımızda dropdown menu */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .drpdesc {
+        padding: 15px;
+        text-align: center;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background: #bee4e2;
+        color: #2f8f9d;
+        margin-top: 20px;
+      }
+      .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-content h3 {
+        font-weight: 500;
+        text-transform: capitalize;
+        line-height: 3rem;
+      }
+      .footer-content p {
+        max-width: 500px;
+        margin: 10px auto;
+        line-height: 28px;
+      }
+      .socials {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0 3rem 0;
+      }
+      .socials li {
+        margin: 0 10px;
+      }
+      .socials a {
+        text-decoration: none;
+        color: #2f8f9d;
+        border: 1.1px solid #2f8f9d;
+        padding: 5px;
+        border-radius: 50%;
+      }
+      .socials a i {
+        font-size: 1.1rem;
+        width: 20px;
+        transition: color 0.4s ease;
+      }
+      .socials a:hover i {
+        color: aqua;
+      }
+
+      /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 800px) {
+        .leftcolumn,
+        .rightcolumn {
+          width: 100%;
+          padding: 0;
+        }
+      }
+
+      /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+      @media screen and (max-width: 400px) {
+        .topnav a {
+          float: none;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>MÜZİK DÜKKANIM</h1>
+    </div>
+
+    <div class="topnav">
+      <a class="activee" href="homepage.html">Ana Sayfa</a>
+      <a href="products.html">Ürünlerimiz</a>
+      <a href="about-us.html">Hakkımızda</a>
+    </div>
+
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2 style="color: #2f8f9d">En çok satılanlar...</h2>
+
+          <!-- ***************Responsive image gallery'i ekliyorum******************** -->
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="products.html#gitar1">
+                <img
+                  src="image/Lea Klasik Gitar Seti 3-4 Junior Boy.jpg"
+                  alt="Klasik Gitar"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">
+                Lea Klasik Gitar Seti 3/4 Junior Boy - <strong>669,00₺</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="products.html#davul1">
+                <img
+                  src="image/Extreme Bateri Davul Seti Metalik Kırmızı XDS665RD.jpg"
+                  alt="Forest"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">
+                Extreme Bateri Davul Seti Metalik Kırmızı XDS665RD -
+                <strong>10.199,86₺</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="products.html#keman1">
+                <img
+                  src="image/Carlovy VLA8 - 4-4 Keman.jpg"
+                  alt="Northern Lights"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">
+                Carlovy VLA8 - 4/4 Keman Special - <strong>3.069,36₺</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="products.html#piyano1">
+                <img
+                  src="image/Yamaha YDP S34B Dijital Piyano (Siyah).jpg"
+                  alt="Mountains"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">
+                Yamaha YDP S34B Dijital Piyano (Siyah) -
+                <strong>22.499,00₺</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+          <!-- ****************image galelery kısmının bittiği yer********************* -->
+
+          <p><a href="products.html">Diğer ürünler için tıklayınız...</a></p>
+        </div>
+        <div class="card">
+          <h2 style="color: #2f8f9d">En çok arananlar...</h2>
+
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="products.html#gitar2">
+                <img
+                  src="image/Midex RPH20BK-AMP Black Elektro Gitar Seti 20 WATT GAİNLİ Amfi ve Full SET.jpg"
+                  alt="Klasik Gitar"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">
+                Midex RPH20BK-AMP Black Elektro Gitar Seti 20 WATT GAİN'Lİ Amfi
+                ve Full SET -
+                <strong>2.755,58₺</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="products.html#davul2">
+                <img
+                  src="image/Fenix Roland TD-17KVX Dijital Davul Seti.jpg"
+                  alt="Forest"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">
+                Fenix Roland TD-17KVX Dijital Davul Seti -
+                <strong>40.086,00₺</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="products.html#keman2">
+                <img
+                  src="image/Puka El Yapımı Keman Keman.jpg"
+                  alt="Northern Lights"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">
+                Puka El Yapımı Keman Keman - <strong>7.249,00₺</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="products.html#piyano2">
+                <img
+                  src="image/Yamaha Cfıııs Concert Grand Konser Kuyruklu Piyano (Parlak Siyah).jpg"
+                  alt="Mountains"
+                  width="600"
+                  height="400"
+                />
+              </a>
+              <div class="desc">
+                Yamaha Cfıııs Concert Grand Konser Kuyruklu Piyano (Parlak
+                Siyah) -
+                <strong>2.498.523,16₺</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+          <!-- ****************image galelery kısmının bittiği yer********************* -->
+
+          <p><a href="products.html">Diğer ürünler için tıklayınız...</a></p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <!-- **************HAKKIMIZDA KISMI***************** -->
+          <h2 style="color: #2f8f9d; text-align: center">Hakkımızda</h2>
+          <div class="dropdown">
+            <img
+              src="image/hakkimizda.png"
+              alt="Hakkımızda"
+              width="100"
+              height="50"
+            />
+            <div class="dropdown-content">
+              <img
+                src="image/hakkimizda.png"
+                alt="Cinque Terre"
+                width="300"
+                height="200"
+              />
+              <div class="drpdesc">
+                <a href="about-us.html">Daha fazlası için tıklayınız...</a>
+              </div>
+            </div>
+          </div>
+          <p><a href="about-us.html">Hakkımızda için tıklayınız...</a></p>
+        </div>
+
+        <!-- *****************Most Popular Kısmı**************** -->
+        <div class="card">
+          <h2 style="color: #2f8f9d; text-align: center">Popular Post</h2>
+          <div class="dropdown">
+            <img
+              src="image/Yamaha Cfıııs Concert Grand Konser Kuyruklu Piyano (Parlak Siyah).jpg"
+              alt="Piyano 2"
+              width="100"
+              height="50"
+            />
+            <div class="dropdown-content">
+              <img
+                src="image/Yamaha Cfıııs Concert Grand Konser Kuyruklu Piyano (Parlak Siyah).jpg"
+                alt="Piyano 2"
+                width="300"
+                height="200"
+              />
+              <div class="drpdesc">
+                <a href="products.html#piyano2" target="_blank"
+                  >Yamaha Cfıııs Concert Grand Konser Kuyruklu Piyano...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <img
+              src="image/Fenix Roland TD-17KVX Dijital Davul Seti.jpg"
+              alt="Davul 2"
+              width="100"
+              height="50"
+            />
+            <div class="dropdown-content">
+              <img
+                src="image/Fenix Roland TD-17KVX Dijital Davul Seti.jpg"
+                alt="Davul 2"
+                width="300"
+                height="200"
+              />
+              <div class="drpdesc">
+                <a href="products.html#davul2" target="_blank"
+                  >Fenix Roland TD-17KVX Dijital Davul Seti...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <img
+              src="image/Puka El Yapımı Keman Keman.jpg"
+              alt="Keman 2"
+              width="100"
+              height="50"
+            />
+            <div class="dropdown-content">
+              <img
+                src="image/Puka El Yapımı Keman Keman.jpg"
+                alt="Keman 2"
+                width="300"
+                height="200"
+              />
+              <div class="drpdesc">
+                <a href="products.html" target="_blank"
+                  >Puka El Yapımı Keman...</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="background-color: white; padding: 20px; margin-top: 20px">
+          <h2 style="color: #2f8f9d; text-align: center">Bizi Takip Edin</h2>
+          <ul class="socials">
+            <li>
+              <a href="#"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-google-plus"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-youtube"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-linkedin-square"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- **************FOOTER BAŞLANGICI**************** -->
+    <div class="footer">
+      <h2>Footer</h2>
+      <div class="footer-content">
+        <p>
+          Copyright &copy; 2022 All Rights Reserved by
+          <a href="#">Müzik Dükkanım</a>.
+        </p>
+        <ul class="socials">
+          <li>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-linkedin-square"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
